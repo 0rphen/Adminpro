@@ -1,6 +1,6 @@
 import { Inject } from '@angular/core';
 import { Injectable } from '@angular/core';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 
 @Injectable({
     providedIn: 'root'
@@ -11,7 +11,7 @@ export class SettingsService {
         tema: 'default'
     }
 
-    constructor(@Inject(DOCUMENT) private _document) {
+    constructor(@Inject(DOCUMENT) private _document: any) {
         this.cargarAjustes();
     }
 

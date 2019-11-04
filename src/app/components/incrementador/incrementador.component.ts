@@ -12,7 +12,7 @@ export class IncrementadorComponent implements OnInit {
 
     @Output() cambioValor: EventEmitter<number> = new EventEmitter();
 
-    @ViewChild('txtProgress') txtProgress: ElementRef;
+    @ViewChild('txtProgress', { static: false }) txtProgress: ElementRef;
 
     constructor() {
     }
